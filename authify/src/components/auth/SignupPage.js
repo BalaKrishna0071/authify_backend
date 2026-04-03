@@ -48,7 +48,7 @@ export default function SignupPage() {
         setLoading(true);
         setError("");
 
-        const response = await axios.post("http://127.0.0.1:8004/api/v1/auth/user", {
+        const response = await axios.post("https://authify-jtr3.onrender.com/api/v1/auth/user", {
             username: form.name,
             email: form.email,
             phone: form.phone,

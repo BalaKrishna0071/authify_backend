@@ -25,7 +25,7 @@ export default function LoginPage() {
         setError("");
 
         // Response
-        const response = await axios.post("http://127.0.0.1:8004/api/v1/auth/login", {
+        const response = await axios.post("https://authify-jtr3.onrender.com/api/v1/auth/login", {
             email: form.email,
             password: form.password,
         });
