@@ -17,6 +17,7 @@ class DbConnection:
         self.PASSWORD = config.get_variable("DB_PASSWORD")
         self.DATABASE = config.get_variable("DB_DATABASE")
         self.PORT = config.get_variable("DB_PORT")
-        self.engine = create_engine(f"postgresql+psycopg2://{self.USER}:{self.PASSWORD}@{self.HOST}:{self.PORT}/{self.DATABASE}")
+        self.engine = create_engine(f"postgresql+psycopg2://{self.USER}:{self.PASSWORD}@{self.HOST}:{self.PORT}/{self.DATABASE}"
+                                    , connect_args={"sslmode": "require"})
 
 
